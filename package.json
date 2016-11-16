@@ -1,7 +1,7 @@
 {
-  "name": "xtractor",
+  "name": "xmas_calendar",
   "version": "1.0.0",
-  "description": "Haem Academy website",
+  "description": "Rebla Xmas Calendar",
   "main": "index.js",
   "scripts": {
     "dev": "NODE_PATH=$(pwd) webpack-dev-server --progress --inline --content-base public/",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ReblaAB/xtractor.git"
+    "url": ""
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ReblaAB/xtractor/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/ReblaAB/xtractor#readme",
+  "homepage": "",
   "engines": {
     "node": "5.9.1"
   },
