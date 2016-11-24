@@ -1,11 +1,12 @@
 import React from 'react'
 import Text from './text'
+import queryParams from './queryParams'
 
 const Window = ({id, onClick, style}) => {
 
   let now = new Date
   /* TODO: Used for testing, remove */
-  now = new Date(2016,11,4)
+  now = new Date(2016,11,queryParams()['day'])
   const active = now >= new Date(2016,11,id)
   const pulsate = now.getDate() == id
 
@@ -21,11 +22,11 @@ const Window = ({id, onClick, style}) => {
     backgroundColor: 'deepPink',
     margin: '1em .5em 0 .5em',
     cursor: active ? 'pointer' : 'default',
-    opacity: active ? '.9' : '.1'
+    opacity: active ? '1' : '.5'
   }
 
   return (
-    <a onClick={() => { onClick(id) }}
+    <a onClick={() => { active && onClick(id) }}
       style={Object.assign(defaultStyle, style)}>
         <Text>{id}.</Text>
     </a>
