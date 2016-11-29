@@ -8,6 +8,7 @@ class App extends Component {
     super()
     this.state = { activeOverlay: null}
     this.handleWindowClick = this.handleWindowClick.bind(this)
+    this.order = [9,14,19,24,18,11,17,10,13,1,21,3,22,15,23,4,2,7,6,5,8,16,20,12]
   }
 
   handleWindowClick(id){
@@ -27,6 +28,11 @@ class App extends Component {
   }
 
   render() {
+    const windows = []
+    for(let i = 0; i < this.order.length; i++){
+      windows.push(<Window key={this.order[i]} id={this.order[i]} onClick={(id) => this.handleWindowClick(id)}/>)
+    }
+
     return (
       <div>
         <div style={{
@@ -35,32 +41,7 @@ class App extends Component {
           display: 'flex',
           justifyContent: 'center',
           flexWrap: 'wrap'}}>
-          <Window id={1}
-            onClick={(id) => this.handleWindowClick(id)}
-            style={{
-            backgroundColor: 'deepPink'}}/>
-          <Window id={2}
-            onClick={(id) => this.handleWindowClick(id)}
-            style={{
-            backgroundColor: 'crimson'}}/>
-          <Window id={3}
-            onClick={(id) => this.handleWindowClick(id)}
-            style={{
-            backgroundColor: 'hotPink'}}/>
-          <Window id={4}
-            onClick={(id) => this.handleWindowClick(id)}
-            style={{
-            backgroundColor: 'black'}}/>
-          <Window id={5}
-            onClick={(id) => this.handleWindowClick(id)}
-            style={{
-            backgroundColor: 'yellow',
-            color: 'black'}}/>
-          <Window id={6}
-            onClick={(id) => this.handleWindowClick(id)}
-            style={{
-            backgroundColor: 'rebeccaPurple',
-            color: 'lime'}}/>
+          {windows}
         </div>
         <Overlay id={1}
           activeOverlay={this.state.activeOverlay}

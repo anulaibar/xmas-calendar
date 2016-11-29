@@ -4,10 +4,13 @@ import queryParams from './queryParams'
 
 const Window = ({id, onClick, style}) => {
 
-  let now = new Date
-  /* TODO: Used for testing, remove */
-  now = new Date(2016,11,queryParams()['day'])
-  const active = now >= new Date(2016,11,id)
+  let now
+  if(queryParams()['day']){
+    now = new Date(2016, 11, queryParams()['day'])
+  } else {
+    now = new Date()
+  }
+  const active = now >= new Date(2016, 11, id)
   const pulsate = now.getDate() == id
 
   const defaultStyle = {
@@ -15,20 +18,20 @@ const Window = ({id, onClick, style}) => {
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: '50%',
-    color: 'white',
     width: '7em',
     height: '7em',
     animation: pulsate ? 'pulsate 3s ease-in-out infinite' : '',
-    backgroundColor: 'deepPink',
     margin: '1em .5em 0 .5em',
+    color: active ? 'white' : 'black',
+    backgroundColor: active ? 'red' : 'white',
     cursor: active ? 'pointer' : 'default',
-    opacity: active ? '1' : '.5'
+    opacity: active ? '.8' : '.8'
   }
 
   return (
     <a onClick={() => { active && onClick(id) }}
       style={Object.assign(defaultStyle, style)}>
-        <Text>{id}.</Text>
+        <Text>{id}</Text>
     </a>
   )
 }
