@@ -8,10 +8,9 @@ class Overlay extends Component {
 
   componentDidMount() {
     window.onkeyup = (event) => {
-      // TODO: Change to ESC
-      let p = 80
-      if(event.keyCode == p){
-          this.props.onClose()
+      let esc = 27
+      if(event.keyCode == esc){
+        this.props.onClose()
       }
     }
   }
@@ -36,28 +35,36 @@ class Overlay extends Component {
           top: active ? 0 : '-100vh',
           transition: 'all .5s',
           left: 0,
-          width: '100%',
-          height: '100%',
+          width: '100vw',
+          height: '100vh',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center'}}>
-          <div style={{
-            backgroundColor: 'aliceBlue',
-            color: 'black',
-            borderRadius: '1em',
-            zIndex: 10}}>
-            <div onClick={() => this.props.onClose()} style={{
-              textAlign: 'center',
-              padding: '1em',
-              font: '1em sans-serif',
-              color: 'darkGray',
-              borderBottom: '1px solid darkGray'}}>
-              <a style={{cursor: 'pointer'}}>X</a>
-            </div>
-            <div>
-              <img src={`/img/${this.props.id}.gif`}/>
-            </div>
+          <div style={{position: 'relative'}}>
+          <div onClick={() => this.props.onClose()} style={{
+            font: '2em sans-serif',
+            lineHeight: '0',
+            color: 'white',
+            position: 'absolute',
+            top: '1em',
+            right: '1em'}}>
+            <a style={{cursor: 'pointer'}}>×</a>
           </div>
+          <div style={{
+            position: 'absolute',
+            bottom: '1em',
+            left: '1em',
+            fontFamily: 'Georgia',
+            fontSize: '2em',
+            color: 'White'}}>
+            {this.props.children}
+          </div>
+          <img style={{
+            width: '100%',
+            borderRadius: '1em',
+            zIndex: 10}}
+            src={`/img/${this.props.id}.jpeg`}/>
+        </div>
         </div>
       </div>
     )

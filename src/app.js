@@ -45,7 +45,12 @@ class App extends Component {
         </div>
         <Overlay id={1}
           activeOverlay={this.state.activeOverlay}
-          onClose={() => this.handleOverlayClose()}/>
+          onClose={() => this.handleOverlayClose()}>
+          På Wärdshuset finns pizza<br/>
+          För bagare att baka<br/>
+          Och våra bästa grannar<br/>
+          Tog med oss dit att smaka
+        </Overlay>
         <Overlay id={2}
           activeOverlay={this.state.activeOverlay}
           onClose={() => this.handleOverlayClose()}/>

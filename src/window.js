@@ -20,12 +20,12 @@ const Window = ({id, onClick, style}) => {
     borderRadius: '50%',
     width: '7em',
     height: '7em',
+    margin: '2em 1em 0 1em',
     animation: pulsate ? 'pulsate 3s ease-in-out infinite' : '',
-    margin: '1em .5em 0 .5em',
-    color: active ? 'white' : 'black',
-    backgroundColor: active ? 'red' : 'white',
+    color: pulsate ? 'white' : 'black',
+    backgroundColor: pulsate ? 'red' : active ? 'white' : 'transparent',
     cursor: active ? 'pointer' : 'default',
-    opacity: active ? '.8' : '.8'
+    opacity: active ? '.8' : '1'
   }
 
   return (
