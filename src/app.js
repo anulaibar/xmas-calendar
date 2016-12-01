@@ -49,13 +49,18 @@ class App extends Component {
           activeOverlay={this.state.activeOverlay}
           onClose={() => this.handleOverlayClose()}>
           På Wärdshuset finns pizza<br/>
-          För bagare att baka<br/>
+          för bagare att baka<br/>
           Och våra bästa grannar<br/>
-          Tog med oss dit att smaka
+          tog med oss dit att smaka
         </Overlay>
         <Overlay id={2}
           activeOverlay={this.state.activeOverlay}
-          onClose={() => this.handleOverlayClose()}/>
+          onClose={() => this.handleOverlayClose()}>
+          På sportlovet i Edsåsdalen<br/>
+          om tiden kunde stanna<br/>
+          Vi vill tillbaks och mysa mer<br/>
+          med Greta, Olle, Hanna
+        </Overlay>
         <Overlay id={3}
           activeOverlay={this.state.activeOverlay}
           onClose={() => this.handleOverlayClose()}/>

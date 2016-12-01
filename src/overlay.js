@@ -41,30 +41,29 @@ class Overlay extends Component {
           alignItems: 'center',
           justifyContent: 'center'}}>
           <div style={{position: 'relative'}}>
-          <div onClick={() => this.props.onClose()} style={{
-            font: '2em sans-serif',
-            lineHeight: '0',
-            color: 'white',
-            position: 'absolute',
-            top: '1em',
-            right: '1em'}}>
-            <a style={{cursor: 'pointer'}}>×</a>
-          </div>
-          <div style={{
-            position: 'absolute',
-            bottom: '1em',
-            left: '1em',
-            color: 'White'}}>
-            <p>
+            <div onClick={() => this.props.onClose()} style={{
+              font: '2em sans-serif',
+              lineHeight: '0',
+              color: 'white',
+              position: 'absolute',
+              top: '1em',
+              right: '1em'}}>
+              <a style={{cursor: 'pointer'}}>×</a>
+            </div>
+            <p style={{
+              position: 'absolute',
+              bottom: '1em',
+              left: '1em',
+              color: 'White',
+              margin: 0}}>
               {this.props.children}
             </p>
+            <img style={{
+              width: '100%',
+              borderRadius: '1em',
+              zIndex: 10}}
+              src={`/img/${this.props.id}.jpg`}/>
           </div>
-          <img style={{
-            width: '100%',
-            borderRadius: '1em',
-            zIndex: 10}}
-            src={`/img/${this.props.id}.jpeg`}/>
-        </div>
         </div>
       </div>
     )
