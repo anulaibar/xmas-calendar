@@ -21,7 +21,7 @@ class Overlay extends Component {
     return (
       <div>
         <div style={{
-          position: 'absolute',
+          position: 'fixed',
           top: active ? 0 : '-100vh',
           transition: 'all .5s',
           left: 0,
@@ -31,7 +31,7 @@ class Overlay extends Component {
           opacity: '.7'}}/>
         <div onClick={() => this.props.onClose()} style={{
           display: 'block',
-          position: 'absolute',
+          position: 'fixed',
           top: active ? 0 : '-100vh',
           transition: 'all .5s',
           left: 0,
@@ -54,10 +54,10 @@ class Overlay extends Component {
             position: 'absolute',
             bottom: '1em',
             left: '1em',
-            fontFamily: 'Georgia',
-            fontSize: '2em',
             color: 'White'}}>
-            {this.props.children}
+            <p>
+              {this.props.children}
+            </p>
           </div>
           <img style={{
             width: '100%',

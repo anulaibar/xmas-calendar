@@ -1,5 +1,4 @@
 import React from 'react'
-import Text from './text'
 import queryParams from './queryParams'
 
 const Window = ({id, onClick, style}) => {
@@ -31,7 +30,9 @@ const Window = ({id, onClick, style}) => {
   return (
     <a onClick={() => { active && onClick(id) }}
       style={Object.assign(defaultStyle, style)}>
-        <Text>{id}</Text>
+      <span style={{fontSize: '3em'}}>
+        {id}
+      </span>
     </a>
   )
 }

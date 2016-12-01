@@ -34,7 +34,9 @@ class App extends Component {
     }
 
     return (
-      <div>
+      <div style={{
+        fontFamily: 'Georgia',
+        fontWeight: 'bold'}}>
         <div style={{
           width: '100%',
           height: '100%',
