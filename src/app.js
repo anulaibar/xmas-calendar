@@ -57,7 +57,7 @@ class App extends Component {
           activeOverlay={this.state.activeOverlay}
           onClose={() => this.handleOverlayClose()}>
           På sportlovet i Edsåsdalen<br/>
-          om tiden kunde stanna<br/>
+          Om tiden kunde stanna<br/>
           Vi vill tillbaks och mysa mer<br/>
           med Greta, Olle, Hanna
         </Overlay>
