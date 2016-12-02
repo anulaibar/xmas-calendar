@@ -18,6 +18,19 @@ class Overlay extends Component {
   render() {
     const active = this.props.activeOverlay == this.props.id
 
+    const style = {
+      width: '100%',
+      borderRadius: '1em',
+      zIndex: 10
+    }
+    const video = this.props.video && (
+      <video controls style={style}
+        src={`https://s3.eu-central-1.amazonaws.com/xmas-cal/${this.props.id}.m4v`}/>
+    )
+    const image = (
+      <img style={style}
+        src={`/img/${this.props.id}.jpg`}/>
+    )
     return (
       <div>
         <div style={{
@@ -58,11 +71,7 @@ class Overlay extends Component {
               margin: 0}}>
               {this.props.children}
             </p>
-            <img style={{
-              width: '100%',
-              borderRadius: '1em',
-              zIndex: 10}}
-              src={`/img/${this.props.id}.jpg`}/>
+            {video || image}
           </div>
         </div>
       </div>
