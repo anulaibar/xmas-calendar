@@ -23,11 +23,15 @@ class Overlay extends Component {
       borderRadius: '1em',
       zIndex: 10
     }
-    const video = this.props.video && (
+    const m4v = this.props.m4v && (
       <video controls style={style}
         src={`https://s3.eu-central-1.amazonaws.com/xmas-cal/${this.props.id}.m4v`}/>
     )
-    const image = (
+    const gif = this.props.gif && (
+      <img style={style}
+        src={`/img/${this.props.id}.gif`}/>
+    )
+    const jpg = (
       <img style={style}
         src={`/img/${this.props.id}.jpg`}/>
     )
@@ -71,7 +75,7 @@ class Overlay extends Component {
               margin: 0}}>
               {this.props.children}
             </p>
-            {video || image}
+            {m4v || gif || jpg}
           </div>
         </div>
       </div>

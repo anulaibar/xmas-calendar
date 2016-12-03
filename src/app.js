@@ -61,13 +61,21 @@ class App extends Component {
           Vi vill tillbaks och mysa mer<br/>
           med Greta, Olle, Hanna
         </Overlay>
-        <Overlay id={3} video
+        <Overlay id={3} m4v
           activeOverlay={this.state.activeOverlay}
           onClose={() => this.handleOverlayClose()}>
           Åka pulka<br/>
           och sjunga<br/>
           Det är sköj<br/>
           för de unga
+        </Overlay>
+        <Overlay id={4} gif
+          activeOverlay={this.state.activeOverlay}
+          onClose={() => this.handleOverlayClose()}>
+          När 5 ska bli 6<br/>
+          får man improvisera<br/>
+          På 8 kvadrat<br/>
+          fick vi in ett rum mera
         </Overlay>
       </div>
     )
