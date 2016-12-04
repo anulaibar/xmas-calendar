@@ -47,36 +47,39 @@ class App extends Component {
         </div>
         <Overlay id={1}
           activeOverlay={this.state.activeOverlay}
-          onClose={() => this.handleOverlayClose()}>
-          På Wärdshuset finns pizza<br/>
-          för bagare att baka<br/>
-          Och våra bästa grannar<br/>
-          tog med oss dit att smaka
-        </Overlay>
+          onClose={() => this.handleOverlayClose()}
+          row1="På Wärdshuset finns pizza"
+          row2="för bagare att baka"
+          row3="Och våra bästa grannar"
+          row4="tog med oss dit att smaka"/>
         <Overlay id={2}
           activeOverlay={this.state.activeOverlay}
-          onClose={() => this.handleOverlayClose()}>
-          På sportlovet i Edsåsdalen<br/>
-          Om tiden kunde stanna<br/>
-          Vi vill tillbaks och mysa mer<br/>
-          med Greta, Olle, Hanna
-        </Overlay>
+          onClose={() => this.handleOverlayClose()}
+          row1="På sportlovet i Edsåsdalen"
+          row2="Om tiden kunde stanna"
+          row3="Vi vill tillbaks och mysa mer"
+          row4="med Greta, Olle, Hanna"/>
         <Overlay id={3} m4v
           activeOverlay={this.state.activeOverlay}
-          onClose={() => this.handleOverlayClose()}>
-          Åka pulka<br/>
-          och sjunga<br/>
-          Det är sköj<br/>
-          för de unga
-        </Overlay>
+          onClose={() => this.handleOverlayClose()}
+          row1="Åka pulka"
+          row2="och sjunga"
+          row3="Det är sköj"
+          row4="för de unga"/>
         <Overlay id={4} gif
           activeOverlay={this.state.activeOverlay}
-          onClose={() => this.handleOverlayClose()}>
-          När 5 ska bli 6<br/>
-          får man improvisera<br/>
-          På 8 kvadrat<br/>
-          fick vi in ett rum mera
-        </Overlay>
+          onClose={() => this.handleOverlayClose()}
+          row1="När 5 ska bli 6"
+          row2="får man improvisera"
+          row3="På 8 kvadrat"
+          row4="fick vi in ett rum mera"/>
+        <Overlay id={5}
+          activeOverlay={this.state.activeOverlay}
+          onClose={() => this.handleOverlayClose()}
+          row1="Mormor bjöd på tårta"
+          row2="när Vide fyllde tre"
+          row3="Han firades ordentligt"
+          row4="med flugan lätt på sne"/>
       </div>
     )
   }

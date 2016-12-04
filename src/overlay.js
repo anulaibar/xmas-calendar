@@ -70,10 +70,20 @@ class Overlay extends Component {
             <p style={{
               position: 'absolute',
               bottom: '1em',
-              left: '1em',
               color: 'White',
               margin: 0}}>
-              {this.props.children}
+              <span style={{backgroundColor: 'rgba(0,0,0,.7)'}}>
+                {this.props.row1}
+              </span><br/>
+              <span style={{backgroundColor: 'rgba(0,0,0,.7)'}}>
+                {this.props.row2}
+              </span><br/>
+              <span style={{backgroundColor: 'rgba(0,0,0,.7)'}}>
+                {this.props.row3}
+              </span><br/>
+              <span style={{backgroundColor: 'rgba(0,0,0,.7)'}}>
+                {this.props.row4}
+              </span>
             </p>
             {m4v || gif || jpg}
           </div>
