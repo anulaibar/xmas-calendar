@@ -94,6 +94,13 @@ class App extends Component {
           row2="kämpar och har kul"
           row3="Jagar boll och skjuter mål"
           row4="ända fram till jul"/>
+        <Overlay id={8}
+          activeOverlay={this.state.activeOverlay}
+          onClose={() => this.handleOverlayClose()}
+          row1="Lott 69"
+          row2="blev vår till slut"
+          row3="Efter 4 månader"
+          row4="åkte vi ut"/>
       </div>
     )
   }
