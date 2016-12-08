@@ -106,7 +106,7 @@ class App extends Component {
           onClose={() => this.handleOverlayClose()}
           row1="Den 12e maj"
           row2="efter midnatt"
-          row3="Kom en liten pöjk"
+          row3="Kom vår fine pöjk"
           row4="liten som en katt"/>
         <Overlay id={10}
           activeOverlay={this.state.activeOverlay}
