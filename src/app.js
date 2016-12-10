@@ -122,6 +122,20 @@ class App extends Component {
           row2="är väldigt bra"
           row3="Mot en zombie"
           row4="som dig vill ta"/>
+        <Overlay id={12}
+          activeOverlay={this.state.activeOverlay}
+          onClose={() => this.handleOverlayClose()}
+          row1="Yayoi Kusama"
+          row2="på Moderna"
+          row3="Det var prickigt"
+          row4="hon är en stjärna"/>
+        <Overlay id={13}
+          activeOverlay={this.state.activeOverlay}
+          onClose={() => this.handleOverlayClose()}
+          row1="Kom på grillparty"
+          row2="om du vill"
+          row3="Vi ärvde brf:ens"
+          row4="gamla grill"/>
       </div>
     )
   }
