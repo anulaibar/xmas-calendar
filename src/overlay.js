@@ -57,7 +57,9 @@ class Overlay extends Component {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center'}}>
-          <div style={{position: 'relative'}}>
+          <div style={{
+            position: 'relative',
+            width: '600px'}}>
             <div onClick={() => this.props.onClose()} style={{
               font: '2em sans-serif',
               lineHeight: '0',

@@ -139,10 +139,10 @@ class App extends Component {
         <Overlay id={14} m4v
           activeOverlay={this.state.activeOverlay}
           onClose={() => this.handleOverlayClose()}
-          row1="Hoppa säck"
-          row2="var riktigt kul"
-          row3="I Fårösund"
-          row4="långt innan jul"/>
+          row1="I Fårösund"
+          row2="på Familjedagen"
+          row3="Hoppar Alvar"
+          row4="säck i hagen"/>
       </div>
     )
   }
