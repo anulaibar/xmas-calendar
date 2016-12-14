@@ -71,6 +71,8 @@ class Overlay extends Component {
             </div>
             <p style={{
               position: 'absolute',
+              right: this.props.textAlign == 'right' ? 0 : false,
+              textAlign: this.props.textAlign == 'right' ? 'right' : false,
               bottom: '1em',
               color: 'White',
               margin: 0}}>

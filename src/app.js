@@ -143,6 +143,13 @@ class App extends Component {
           row2="på Familjedagen"
           row3="Hoppar Alvar"
           row4="säck i hagen"/>
+        <Overlay id={15} textAlign="right"
+          activeOverlay={this.state.activeOverlay}
+          onClose={() => this.handleOverlayClose()}
+          row1="Till Ekstakusten"
+          row2="åkte vi för att leka,"
+          row3="köra fyrhjuling, bada"
+          row4="och bara steka"/>
       </div>
     )
   }
