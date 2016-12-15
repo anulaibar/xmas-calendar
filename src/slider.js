@@ -13,7 +13,7 @@ class Slider extends Component {
   componentDidMount() {
     this.interval = window.setInterval(() => {
       this.next()
-    }, 3000)
+    }, 5000)
   }
 
   next() {
