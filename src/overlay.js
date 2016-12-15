@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+import Slider from './slider'
 
 class Overlay extends Component {
 
@@ -30,6 +31,10 @@ class Overlay extends Component {
     const gif = this.props.gif && (
       <img style={style}
         src={`/img/${this.props.id}.gif`}/>
+    )
+    const slider = this.props.slider && (
+      <Slider style={style}
+        windowId={this.props.id}/>
     )
     const jpg = (
       <img style={style}
@@ -64,6 +69,7 @@ class Overlay extends Component {
               font: '2em sans-serif',
               lineHeight: '0',
               color: 'white',
+              zIndex: 11,
               position: 'absolute',
               top: '1em',
               right: '1em'}}>
@@ -75,6 +81,7 @@ class Overlay extends Component {
               textAlign: this.props.textAlign == 'right' ? 'right' : false,
               bottom: '1em',
               color: 'White',
+              zIndex: 11,
               margin: 0}}>
               <span style={{backgroundColor: 'rgba(0,0,0,.7)'}}>
                 {this.props.row1}
@@ -89,7 +96,7 @@ class Overlay extends Component {
                 {this.props.row4}
               </span>
             </p>
-            {m4v || gif || jpg}
+            {m4v || gif || slider || jpg}
           </div>
         </div>
       </div>

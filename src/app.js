@@ -150,6 +150,13 @@ class App extends Component {
           row2="åkte vi för att leka,"
           row3="köra fyrhjuling, bada"
           row4="och bara steka"/>
+        <Overlay id={16} slider textAlign="right"
+          activeOverlay={this.state.activeOverlay}
+          onClose={() => this.handleOverlayClose()}
+          row1="Choi Jeong Hwa ♥️ plast"
+          row2="Ernesto Neto ♥️ garn"
+          row3="På Kiasma i Helsingfors"
+          row4="lekte små som stora barn"/>
       </div>
     )
   }
