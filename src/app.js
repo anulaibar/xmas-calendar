@@ -157,6 +157,13 @@ class App extends Component {
           row2="Ernesto Neto ♥️ garn"
           row3="På Kiasma i Helsingfors"
           row4="lekte små som stora barn"/>
+        <Overlay id={17}
+          activeOverlay={this.state.activeOverlay}
+          onClose={() => this.handleOverlayClose()}
+          row1="Fafa's falafel"
+          row2="på Stora Robertsgatan"
+          row3="Vi blev förvånade"
+          row4="den var god som satan"/>
       </div>
     )
   }
