@@ -164,6 +164,13 @@ class App extends Component {
           row2="på Stora Robertsgatan"
           row3="Vi blev förvånade"
           row4="den var god som satan"/>
+        <Overlay id={18} m4v textAlign="right"
+          activeOverlay={this.state.activeOverlay}
+          onClose={() => this.handleOverlayClose()}
+          row1="Skrivis är klurigt"
+          row2="lurigt och glatt"
+          row3="Så stolt man kan bli"
+          row4="av en dansande katt"/>
       </div>
     )
   }
