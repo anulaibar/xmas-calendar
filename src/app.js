@@ -171,6 +171,13 @@ class App extends Component {
           row2="lurigt och glatt"
           row3="Så stolt man kan bli"
           row4="av en dansande katt"/>
+        <Overlay id={19} textAlign="right"
+          activeOverlay={this.state.activeOverlay}
+          onClose={() => this.handleOverlayClose()}
+          row1="En massa Zombies!"
+          row2="De tar dig gärna"
+          row3="De gick på party"
+          row4="och åt en hjärna"/>
       </div>
     )
   }
