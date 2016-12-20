@@ -192,6 +192,13 @@ class App extends Component {
           row2="9 år mellan"
           row3="De gosar ofta"
           row4="Inte sällan"/>
+        <Overlay id={24} m4v
+          activeOverlay={this.state.activeOverlay}
+          onClose={() => this.handleOverlayClose()}
+          row1=""
+          row2=""
+          row3=""
+          row4=""/>
       </div>
     )
   }
