@@ -185,6 +185,13 @@ class App extends Component {
           row2="vi firade vår kille"
           row3="Egil Harald Hellgren"
           row4="blev namnet på den lille"/>
+        <Overlay id={21}
+          activeOverlay={this.state.activeOverlay}
+          onClose={() => this.handleOverlayClose()}
+          row1="2 brorsor"
+          row2="9 år mellan"
+          row3="De gosar ofta"
+          row4="Inte sällan"/>
       </div>
     )
   }
