@@ -4,11 +4,7 @@ This is a christmas calendar for 2016.
 
 ## Run
 
-`npm run dev`
-
-## Launch
-
-`open http://localhost:8080`
+`npm run dev` and open http://localhost:8080
 
 ## Test
 
